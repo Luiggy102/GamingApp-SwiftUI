@@ -27,11 +27,11 @@ struct LoginAndRegisterView: View {
         VStack {
             HStack {
                 Spacer()
-                Button("Log in") {
+                Button("Log in".uppercased()) {
                     typeOfLogIn = true
                 } .foregroundColor(typeOfLogIn ? .white : .gray)
                 Spacer()
-                Button("Sign up") {
+                Button("Sign up".uppercased()) {
                     typeOfLogIn = false
                 } .foregroundColor(typeOfLogIn ? .gray : .white)
                 Spacer()
@@ -48,17 +48,28 @@ struct LoginAndRegisterView: View {
 
 struct LogInView: View {
     @State var email = "" // dependiendo del usario, esta var se actualizara
+    @State var password = ""
     var body: some View {
         ScrollView { // ScrollView Para pantallas más pequeñas
             VStack(alignment: .leading) {
+                // Mail
                 Text("Email").foregroundColor(Color("Dark-Cyan")).fontWeight(.bold)
-                ZStack(alignment: .leading) {
-                    if email.isEmpty {
-                        Text(verbatim: "mail@example.com").font(.caption).foregroundColor(.gray)
-                    } else {
-                        TextField(" ", text: $email)
-                    }
-                }
+                TextField("example@mail.com", text: $email)
+                    .foregroundColor(.gray)
+                    .font(.caption)
+                Divider()
+                    .frame(height: 1)
+                    .background(Color("Dark-Cyan"))
+                    .padding(.bottom)
+                // Password
+                Text("Password").foregroundColor(Color("Dark-Cyan")).fontWeight(.bold)
+                SecureField("Type your password", text: $password)
+                    .foregroundColor(.gray)
+                    .font(.caption)
+                Divider()
+                    .frame(height: 1)
+                    .background(Color("Dark-Cyan"))
+                    .padding(.bottom)
             }.padding(.horizontal, 77.0)
         }
     }
