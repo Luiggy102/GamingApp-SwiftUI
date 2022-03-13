@@ -49,6 +49,7 @@ struct LoginAndRegisterView: View {
 struct LogInView: View {
     @State var email = "" // dependiendo del usario, esta var se actualizara
     @State var password = ""
+    @State var isPasswordVisible: Bool = false
     var body: some View {
         ScrollView { // ScrollView Para pantallas más pequeñas
             VStack(alignment: .leading) {
@@ -63,9 +64,25 @@ struct LogInView: View {
                     .padding(.bottom)
                 // Password
                 Text("Password").foregroundColor(Color("Dark-Cyan")).fontWeight(.bold)
-                SecureField("Type your password", text: $password)
-                    .foregroundColor(.gray)
-                    .font(.caption)
+                HStack {
+                    if !isPasswordVisible { // difente de == True
+                        SecureField("Type your password", text: $password)
+                            .foregroundColor(Color(UIColor.lightGray))
+                            .font(.caption)
+                    } else {
+                        TextField("", text: $password)
+                            .foregroundColor(Color(UIColor.lightGray))
+                            .font(.caption)
+                    }
+                    Button {
+                        isPasswordVisible.toggle()
+                    } label: {
+                        Image(systemName: isPasswordVisible ? "eye.slash.fill" : "eye.fill")
+                            .foregroundColor(Color("Dark-Cyan"))
+                            .padding(.bottom, 3.0)
+                    }
+                }.padding(.bottom, 3.0)
+
                 Divider()
                     .frame(height: 1)
                     .background(Color("Dark-Cyan"))
