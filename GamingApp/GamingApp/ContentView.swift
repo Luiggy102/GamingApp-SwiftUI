@@ -63,7 +63,7 @@ struct LogInView: View {
                     .background(Color("Dark-Cyan"))
                     .padding(.bottom)
                 // Password
-                Text("Password").foregroundColor(Color("Dark-Cyan")).fontWeight(.bold)
+                Text("Password").foregroundColor(.white).fontWeight(.bold)
                 HStack {
                     if !isPasswordVisible { // difente de == True
                         SecureField("Type your password", text: $password)
@@ -78,15 +78,19 @@ struct LogInView: View {
                         isPasswordVisible.toggle()
                     } label: {
                         Image(systemName: isPasswordVisible ? "eye.slash.fill" : "eye.fill")
-                            .foregroundColor(Color("Dark-Cyan"))
+                            .foregroundColor(.white)
                             .padding(.bottom, 3.0)
                     }
                 }.padding(.bottom, 3.0)
 
                 Divider()
                     .frame(height: 1)
-                    .background(Color("Dark-Cyan"))
+                    .background(.white)
                     .padding(.bottom)
+                Text("Forgot your password?")
+                    .font(.footnote)
+                    .frame(width: 300, alignment: .trailing)
+                    .foregroundColor(Color("Dark-Cyan"))
             }.padding(.horizontal, 77.0)
         }
     }
