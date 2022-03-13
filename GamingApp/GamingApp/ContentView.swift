@@ -48,7 +48,11 @@ struct LoginAndRegisterView: View {
 
 struct LogInView: View {
     var body: some View {
-        Text("Log in view").foregroundColor(.white)
+        ScrollView {
+            VStack {
+                Text("Email").foregroundColor(.cyan)
+            }
+        }
     }
 }
 
@@ -61,7 +65,7 @@ struct SignInView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Image("screen1").resizable()
-        ContentView()
+        ContentView().preferredColorScheme(.dark)
         LoginAndRegisterView()
         LogInView()
         SignInView()
