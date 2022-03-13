@@ -47,11 +47,19 @@ struct LoginAndRegisterView: View {
 }
 
 struct LogInView: View {
+    @State var email = "" // dependiendo del usario, esta var se actualizara
     var body: some View {
-        ScrollView {
-            VStack {
-                Text("Email").foregroundColor(.cyan)
-            }
+        ScrollView { // ScrollView Para pantallas más pequeñas
+            VStack(alignment: .leading) {
+                Text("Email").foregroundColor(Color("Dark-Cyan")).fontWeight(.bold)
+                ZStack(alignment: .leading) {
+                    if email.isEmpty {
+                        Text(verbatim: "mail@example.com").font(.caption).foregroundColor(.gray)
+                    } else {
+                        TextField(" ", text: $email)
+                    }
+                }
+            }.padding(.horizontal, 77.0)
         }
     }
 }
@@ -64,8 +72,8 @@ struct SignInView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Image("screen1").resizable()
         ContentView().preferredColorScheme(.dark)
+        Image("screen1").resizable()
         LoginAndRegisterView()
         LogInView()
         SignInView()
