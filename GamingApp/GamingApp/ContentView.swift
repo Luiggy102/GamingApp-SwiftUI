@@ -15,6 +15,7 @@ struct ContentView: View {
             Color(red: 19/255, green: 30/255, blue: 53/255, opacity: 1.0).ignoresSafeArea() // Background
             VStack {
                 Image("AppLogo").resizable().scaledToFit().frame(width: 250).padding()
+                // Main Views
                 LoginAndRegisterView()
             }
         }
@@ -42,56 +43,6 @@ struct LoginAndRegisterView: View {
             } else {
                 SignInView()
             }
-        }
-    }
-}
-
-struct LogInView: View {
-    @State var email = "" // dependiendo del usario, esta var se actualizara
-    @State var password = ""
-    @State var isPasswordVisible: Bool = false
-    var body: some View {
-        ScrollView { // ScrollView Para pantallas más pequeñas
-            VStack(alignment: .leading) {
-                // Mail
-                Text("Email").foregroundColor(Color("Dark-Cyan")).fontWeight(.bold)
-                TextField("example@mail.com", text: $email)
-                    .foregroundColor(.gray)
-                    .font(.caption)
-                Divider()
-                    .frame(height: 1)
-                    .background(Color("Dark-Cyan"))
-                    .padding(.bottom)
-                // Password
-                Text("Password").foregroundColor(.white).fontWeight(.bold)
-                HStack {
-                    if !isPasswordVisible { // difente de == True
-                        SecureField("Type your password", text: $password)
-                            .foregroundColor(Color(UIColor.lightGray))
-                            .font(.caption)
-                    } else {
-                        TextField("", text: $password)
-                            .foregroundColor(Color(UIColor.lightGray))
-                            .font(.caption)
-                    }
-                    Button {
-                        isPasswordVisible.toggle()
-                    } label: {
-                        Image(systemName: isPasswordVisible ? "eye.slash.fill" : "eye.fill")
-                            .foregroundColor(.white)
-                            .padding(.bottom, 3.0)
-                    }
-                }.padding(.bottom, 3.0)
-
-                Divider()
-                    .frame(height: 1)
-                    .background(.white)
-                    .padding(.bottom)
-                Text("Forgot your password?")
-                    .font(.footnote)
-                    .frame(width: 300, alignment: .trailing)
-                    .foregroundColor(Color("Dark-Cyan"))
-            }.padding(.horizontal, 77.0)
         }
     }
 }
