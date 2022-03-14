@@ -14,7 +14,10 @@ struct ContentView: View {
             // Color pide Double, se divide el # por 255
             Color(red: 19/255, green: 30/255, blue: 53/255, opacity: 1.0).ignoresSafeArea() // Background
             VStack {
-                Image("AppLogo").resizable().scaledToFit().frame(width: 250).padding()
+                Image("AppLogo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 250).padding()
                 // Main Views
                 LoginAndRegisterView()
             }
@@ -41,25 +44,14 @@ struct LoginAndRegisterView: View {
             if typeOfLogIn == true {
                 LogInView()
             } else {
-                SignInView()
+                SignUpView()
             }
         }
-    }
-}
-
-struct SignInView: View {
-    var body: some View {
-        Text("Sign in view").foregroundColor(.white)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().preferredColorScheme(.dark)
-        Image("screen1").resizable()
-        LoginAndRegisterView()
-        LogInView()
-        SignInView()
-        Image("screen2").resizable()
     }
 }

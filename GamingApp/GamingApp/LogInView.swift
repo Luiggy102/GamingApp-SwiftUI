@@ -15,44 +15,34 @@ struct LogInView: View {
         ScrollView { // ScrollView Para pantallas más pequeñas
             VStack(alignment: .leading) {
                 // Mail
-                Text("Email")
+                MailInput(title: "Email", bindingEmail: $email)
+                // Password
+                Text("Password")
                     .foregroundColor(Color("Dark-Cyan"))
                     .fontWeight(.bold)
-                TextField("example@mail.com", text: $email)
-                    .foregroundColor(.white)
-                    .font(.caption)
-                    .foregroundColor(.blue)
-                    .disableAutocorrection(true)
-                Divider()
-                    .frame(height: 1)
-                    .background(Color("Dark-Cyan"))
-                    .padding(.bottom)
-                // Password
-                Text("Password").foregroundColor(.white).fontWeight(.bold)
                 HStack {
                     if !isPasswordVisible { // difente de == True
                         SecureField("Type your password", text: $password)
-                            .foregroundColor(Color(UIColor.lightGray))
+                            .foregroundColor(Color("Dark-Cyan"))
                             .font(.caption)
                             .disableAutocorrection(true)
                     } else {
                         TextField("", text: $password)
-                            .foregroundColor(Color(UIColor.lightGray))
+                            .foregroundColor(Color("Dark-Cyan"))
                             .font(.caption)
                             .disableAutocorrection(true)
                     }
                     Button {
                         isPasswordVisible.toggle()
                     } label: {
-                        Image(systemName: isPasswordVisible ? "eye.slash.fill" : "eye.fill")
-                            .foregroundColor(.white)
-                            .padding(.bottom, 3.0)
+                        Image(systemName: !isPasswordVisible ? "eye.slash.fill" : "eye.fill")
+                            .foregroundColor(Color("Dark-Cyan"))
                     }
-                }.padding(.bottom, 3.0)
+                }.padding(.bottom, 2)
 
                 Divider()
                     .frame(height: 1)
-                    .background(.white)
+                    .background(Color("Dark-Cyan"))
                     .padding(.bottom)
                 // botón de Forgot your password
                 Button {
