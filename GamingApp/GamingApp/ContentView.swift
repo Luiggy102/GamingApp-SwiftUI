@@ -12,12 +12,14 @@ struct ContentView: View {
         ZStack {
             Spacer()
             // Color pide Double, se divide el # por 255
-            Color(red: 19/255, green: 30/255, blue: 53/255, opacity: 1.0).ignoresSafeArea() // Background
+            Color(red: 19/255, green: 30/255, blue: 53/255, opacity: 1.0)
+                .ignoresSafeArea() // Background
             VStack {
                 Image("AppLogo")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 250).padding()
+                    .frame(width: 250)
+                    .padding()
                 // Main Views
                 LoginAndRegisterView()
             }
@@ -33,7 +35,7 @@ struct LoginAndRegisterView: View {
                 Spacer()
                 Button("Log in".uppercased()) {
                     typeOfLogIn = true
-                } .foregroundColor(typeOfLogIn ? .white : .gray)
+                }.foregroundColor(typeOfLogIn ? .white : .gray)
                 Spacer()
                 Button("Sign up".uppercased()) {
                     typeOfLogIn = false

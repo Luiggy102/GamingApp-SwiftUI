@@ -16,35 +16,56 @@ struct SignUpView: View {
                 // foto de usuario
                 VStack {
                     Text("Select a profile picture")
+                        .foregroundColor(.white)
                         .fontWeight(.bold)
                     Text("You can change it or select another one later")
                         .font(.caption)
                         .foregroundColor(.gray)
                         .padding(.bottom)
-                    Image(systemName: "person.circle.fill")
-                        .resizable()
-                        .opacity(1)
-                        .foregroundColor(Color("Dark-Cyan"))
-                        .frame(width: 100, height: 100)
-                        .scaledToFill()
-                        .overlay(Image(systemName: "camera")
-                                    .resizable()
-                                    .frame(width: 50, height: 40)
-                                    .scaledToFill()
-                        )
+                    Button {
+                        // Botón de cambiar foto
+                    } label: {
+                        Image("demoPhoto")
+                            .resizable()
+                            .opacity(1)
+                            .foregroundColor(Color("Dark-Cyan"))
+                            .frame(width: 80, height: 80)
+                            .cornerRadius(50)
+                            .scaledToFill()
+                            .overlay(Image(systemName: "camera")
+                                        .resizable()
+                                        .foregroundColor(.white)
+                                        .frame(width: 30, height: 20)
+                                        .scaledToFill()
+                            )
+                    }
                 }
                 MailInput(title: "Email", bindingEmail: $newUserMail)
                 PasswordInput(title: "Password", bindingPassword: $newUserPassword)
                 PasswordInput(title: "Confirm Password", bindingPassword: $newUserPassword)
                     .padding(.bottom, 40.0)
-                MainButton(textOfTheButton: "Register")
+                Button {
+                    // Botón de registrarse
+                } label: {
+                    MainButton(textOfTheButton: "Register")
+                }
                 Text("Register with Social Media")
+                    .foregroundColor(.white)
                     .padding(.top, 60.0)
                 HStack {
-                    SecundaryButton(textOfTheButton: "Facebook")
-                    SecundaryButton(textOfTheButton: "Twitter")
+                    Button {
+                        // Botón de Facebook
+                    } label: {
+                        SecundaryButton(textOfTheButton: "Facebook")
+                    }
+
+                    Button {
+                        // Botón de Twitter
+                    } label: {
+                        SecundaryButton(textOfTheButton: "Twitter")
+                    }
                 }
-            }.padding(.horizontal, 30.0)
+            }.padding(.horizontal, 30.0).padding(.bottom, 50.0)
         }
     }
 }
