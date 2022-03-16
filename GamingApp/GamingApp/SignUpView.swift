@@ -10,6 +10,7 @@ import SwiftUI
 struct SignUpView: View {
     @State var newUserMail = ""
     @State var newUserPassword = ""
+    @State var confirmNewUserPassword = ""
     var body: some View {
         ScrollView {
             VStack {
@@ -40,9 +41,11 @@ struct SignUpView: View {
                             )
                     }
                 }
-                MailInput(title: "Email", bindingEmail: $newUserMail)
-                PasswordInput(title: "Password", bindingPassword: $newUserPassword)
-                PasswordInput(title: "Confirm Password", bindingPassword: $newUserPassword)
+                MailInput(title: "Email", bindingEmail: $newUserMail, placeholder: "Example@mail.com")
+                PasswordInput(title: "Password", bindingPassword: $newUserPassword, placeholder: "Type your password")
+                PasswordInput(title: "Confirm Password",
+                              bindingPassword: $confirmNewUserPassword,
+                              placeholder: "Type again your password")
                     .padding(.bottom, 40.0)
                 Button {
                     // Botón de registrarse

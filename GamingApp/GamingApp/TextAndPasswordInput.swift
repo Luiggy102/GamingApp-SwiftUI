@@ -12,8 +12,8 @@ struct TextAndPasswordInput: View {
     @State var demoVar2: String = ""
     var body: some View {
         VStack {
-            MailInput(title: "Email", bindingEmail: $demoVar)
-            PasswordInput(title: "Password", bindingPassword: $demoVar2)
+            MailInput(title: "Email", bindingEmail: $demoVar, placeholder: "example@mail.com")
+            PasswordInput(title: "Password", bindingPassword: $demoVar2, placeholder: "demo")
 //            PasswordInputWithButton(title: "a", bindingPassword: $demoVar2, isPasswordVisible: true)
         }
     }
@@ -22,12 +22,13 @@ struct TextAndPasswordInput: View {
 struct MailInput: View {
     var title: String
     var bindingEmail: Binding<String>
+    var placeholder: String
     var body: some View {
         VStack(alignment: .leading) {
             Text(self.title)
                 .foregroundColor(Color("Dark-Cyan"))
                 .fontWeight(.bold)
-            TextField("example@mail.com", text: self.bindingEmail)
+            TextField(placeholder, text: self.bindingEmail)
                 .foregroundColor(.white)
                 .font(.caption)
                 .foregroundColor(.blue)
@@ -42,13 +43,14 @@ struct MailInput: View {
 struct PasswordInput: View {
     var title: String
     var bindingPassword: Binding<String>
+    var placeholder: String
     var body: some View {
         VStack(alignment: .leading) {
             Text(self.title)
                 .foregroundColor(Color("Dark-Cyan"))
                 .fontWeight(.bold)
             HStack {
-                SecureField("Type your password", text: bindingPassword)
+                SecureField(placeholder, text: self.bindingPassword)
                     .foregroundColor(.white)
                 .font(.caption)
             }

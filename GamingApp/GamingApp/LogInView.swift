@@ -15,7 +15,7 @@ struct LogInView: View {
         ScrollView { // ScrollView Para pantallas más pequeñas
             VStack(alignment: .leading) {
                 // Mail
-                MailInput(title: "Email", bindingEmail: $email)
+                MailInput(title: "Email", bindingEmail: $email, placeholder: "Example@mail.com")
                 // Password
                 Text("Password")
                     .foregroundColor(Color("Dark-Cyan"))
