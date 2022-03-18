@@ -63,8 +63,8 @@
 			children = (
 				84E8018827DA68A4003A7475 /* GamingAppApp.swift */,
 				84E8018A27DA68A4003A7475 /* ContentView.swift */,
-				848D97A027DFEFE100DFCE56 /* SignUpView.swift */,
 				8497E45E27DEBD1600D8FA58 /* LogInView.swift */,
+				848D97A027DFEFE100DFCE56 /* SignUpView.swift */,
 				84C4E88027E17000004AB9D5 /* HomeView.swift */,
 				84018F1527DFA5D20021F853 /* Buttons.swift */,
 				84DA3D8C27DFAEC3004322E1 /* TextAndPasswordInput.swift */,

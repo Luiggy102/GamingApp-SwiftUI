@@ -69,6 +69,7 @@ struct SignUpView: View {
                     }
                 }
             }.padding(.horizontal, 30.0)// .padding(.bottom, 50.0)
+                .padding(.bottom, 50.0)
         }
     }
 }
