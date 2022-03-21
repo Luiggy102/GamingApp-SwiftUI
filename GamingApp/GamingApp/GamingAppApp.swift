@@ -12,8 +12,8 @@ import SwiftUI
 struct GamingAppApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            HomeView()
+            ContentView()
+//            HomeView()
         }
     }
 }

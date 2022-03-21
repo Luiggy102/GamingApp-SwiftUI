@@ -30,7 +30,6 @@ struct ContentView: View {
                         .scaledToFit()
                         .frame(width: 250)
                         .padding()
-                    //                    LoginAndRegisterView()
                     VStack {
                         HStack {
                             Spacer()

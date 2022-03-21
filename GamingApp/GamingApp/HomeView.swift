@@ -11,8 +11,8 @@ struct HomeView: View {
     @State var selectedTab: Int = 0
     var body: some View {
         TabView(selection: $selectedTab) {
-            Text("Home view")
-                .tabItem {
+            HomeScreen()
+            .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }.tag(0) // los tags son para identificar los tabs
@@ -31,13 +31,17 @@ struct HomeView: View {
                     Image(systemName: "person")
                     Text("Profile")
                 }.tag(3)
-        }.navigationBarBackButtonHidden(true)
+        }
+        .accentColor(Color.white)
+        .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
     }
     init() {
-        UITabBar.appearance().barTintColor = UIColor(Color(red: 57, green: 63, blue: 83))
-        UITabBar.appearance().isTranslucent = true
-    }
+            UITabBar.appearance().backgroundColor = UIColor(Color(red: 57/255, green: 63/255, blue: 83/255))
+            UITabBar.appearance().unselectedItemTintColor = UIColor.gray
+            UITabBar.appearance().isTranslucent = true
+            print("Iniciando las vistas de home")
+        }
 }
 
 struct HomeView_Previews: PreviewProvider {
