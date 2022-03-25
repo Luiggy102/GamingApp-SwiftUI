@@ -15,7 +15,7 @@ struct HomeScreen: View {
                 .ignoresSafeArea()
             Spacer()
             ScrollView {
-                VStack() {
+                VStack {
                     Image("AppLogo")
                         .resizable()
                         .scaledToFit()
@@ -26,7 +26,7 @@ struct HomeScreen: View {
                             search()
                         } label: {
                             Image(systemName: "magnifyingglass")
-                            .foregroundColor(.gray)
+                            .foregroundColor(searchQuery.isEmpty ? Color.gray : Color.blue)
                         }
                         TextField("Seach a video", text: $searchQuery).foregroundColor(.gray)
                     }.frame(maxWidth: .infinity, idealHeight: 35)
@@ -34,7 +34,7 @@ struct HomeScreen: View {
                     .background(Color(red: 20/255, green: 40/255, blue: 69/255))
                     .cornerRadius(10)
                     Text("The most Popular")
-                    .frame(maxWidth: .infinity,alignment: .leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.top, 10)
                     .foregroundColor(.white)
                     .font(.title)
@@ -45,7 +45,7 @@ struct HomeScreen: View {
             .navigationBarBackButtonHidden(true)
     }
     func search() {
-        print("searching \($searchQuery)")
+        print("searching \($searchQuery!)")
     }
 }
 
