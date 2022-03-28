@@ -33,11 +33,7 @@ struct HomeScreen: View {
                     .padding(.horizontal, 10)
                     .background(Color(red: 20/255, green: 40/255, blue: 69/255))
                     .cornerRadius(10)
-                    Text("The most Popular")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, 10)
-                    .foregroundColor(.white)
-                    .font(.title)
+                    HomeScreenSubmodule()
                     //
                 }.padding(.horizontal, 18)
             } // (horizontal)Para que este un padding en la izquierda y derecha
@@ -49,6 +45,29 @@ struct HomeScreen: View {
     }
 }
 
+struct HomeScreenSubmodule: View {
+    @State var url = "https://cdn.cloudflare.steamstatic.com/steam/apps/256658589/movie480.mp4"
+    @State var isPlayerActive = false
+    let urlVideos: [String] = [
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/256658589/movie480.mp4",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/256671638/movie480.mp4",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/256720061/movie480.mp4",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/256814567/movie480.mp4",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/256705156/movie480.mp4",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/256801252/movie480.mp4",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/256757119/movie480.mp4"
+    ]
+    var body: some View {
+        VStack {
+            Text("The most Popular".uppercased())
+                .font(.title3)
+                .foregroundColor(.white)
+                .bold()
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .padding(.top, 10)
+        }
+    }
+}
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         HomeScreen().preferredColorScheme(.light)

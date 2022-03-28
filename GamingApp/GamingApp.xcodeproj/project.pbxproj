@@ -10,6 +10,7 @@
 		84018F1627DFA5D20021F853 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84018F1527DFA5D20021F853 /* Buttons.swift */; };
 		8488B6EF27E541280027E653 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B6EE27E541280027E653 /* HomeScreen.swift */; };
 		848D97A127DFEFE100DFCE56 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D97A027DFEFE100DFCE56 /* SignUpView.swift */; };
+		849592EE27F2118A00A89494 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849592ED27F2118A00A89494 /* Cards.swift */; };
 		8497E45F27DEBD1600D8FA58 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E45E27DEBD1600D8FA58 /* LogInView.swift */; };
 		84C4E88127E17000004AB9D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4E88027E17000004AB9D5 /* HomeView.swift */; };
 		84DA3D8D27DFAEC3004322E1 /* TextAndPasswordInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA3D8C27DFAEC3004322E1 /* TextAndPasswordInput.swift */; };
@@ -23,6 +24,7 @@
 		84018F1527DFA5D20021F853 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		8488B6EE27E541280027E653 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		848D97A027DFEFE100DFCE56 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		849592ED27F2118A00A89494 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		8497E45E27DEBD1600D8FA58 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		84C4E88027E17000004AB9D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		84DA3D8C27DFAEC3004322E1 /* TextAndPasswordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAndPasswordInput.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				848D97A027DFEFE100DFCE56 /* SignUpView.swift */,
 				84C4E88027E17000004AB9D5 /* HomeView.swift */,
 				8488B6EE27E541280027E653 /* HomeScreen.swift */,
+				849592ED27F2118A00A89494 /* Cards.swift */,
 				84018F1527DFA5D20021F853 /* Buttons.swift */,
 				84DA3D8C27DFAEC3004322E1 /* TextAndPasswordInput.swift */,
 				84E8018C27DA68A5003A7475 /* Assets.xcassets */,
@@ -180,6 +183,7 @@
 				8497E45F27DEBD1600D8FA58 /* LogInView.swift in Sources */,
 				84C4E88127E17000004AB9D5 /* HomeView.swift in Sources */,
 				84DA3D8D27DFAEC3004322E1 /* TextAndPasswordInput.swift in Sources */,
+				849592EE27F2118A00A89494 /* Cards.swift in Sources */,
 				84E8018B27DA68A4003A7475 /* ContentView.swift in Sources */,
 				8488B6EF27E541280027E653 /* HomeScreen.swift in Sources */,
 				84E8018927DA68A4003A7475 /* GamingAppApp.swift in Sources */,
