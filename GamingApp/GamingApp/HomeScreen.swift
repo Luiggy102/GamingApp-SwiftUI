@@ -45,7 +45,7 @@ struct HomeScreen: View {
             .navigationBarBackButtonHidden(true)
     }
     func search() {
-        print("searching \($searchQuery!)")
+        print("searching \($searchQuery)")
     }
 }
 
