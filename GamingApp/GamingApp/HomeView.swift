@@ -32,7 +32,7 @@ struct HomeView: View {
                     Text("Profile")
                 }.tag(3)
         }
-        .accentColor(Color.white)
+//        .accentColor(Color.white)
         .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
     }
