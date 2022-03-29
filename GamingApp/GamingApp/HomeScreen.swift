@@ -35,9 +35,9 @@ struct HomeScreen: View {
                         .background(Color(red: 20/255, green: 40/255, blue: 69/255))
                         .cornerRadius(10)
                         HomeScreenSubmodule()
-                        //
-                    }.padding(.horizontal, 18)
-                } // (horizontal)Para que este un padding en la izquierda y derecha
+                    }.padding(.horizontal, 18).navigationBarHidden(true).navigationBarBackButtonHidden(true)
+                }.navigationBarHidden(true) .navigationBarBackButtonHidden(true)
+                // (horizontal)Para que este un padding en la izquierda y derecha
             }.navigationBarHidden(true)
                 .navigationBarBackButtonHidden(true)
     }
@@ -73,15 +73,20 @@ struct HomeScreenSubmodule: View {
                         print("URL: \(url)")
                         isPlayerActive.toggle()
                     }, label: {
-                        Cards(gameName: "The Witcher 3")
+                        Cards(gameName: "The Witcher 3").padding(.bottom, 20)
                     })
                 Image(systemName: "play.circle.fill")
                 .resizable()
                 .foregroundColor(.white)
                 .frame(width: 42, height: 42)
+                .offset(y: -10)
             }
-
-        }
+            Text("Suggested categories".uppercased())
+                .font(.title3)
+                .foregroundColor(.white)
+                .bold()
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+        }.navigationBarHidden(true).navigationBarBackButtonHidden(true)
         NavigationLink(
                     destination: VideoPlayer(player:
                             AVPlayer(url: URL(string: url)!))
@@ -91,11 +96,11 @@ struct HomeScreenSubmodule: View {
                     label: {
                         EmptyView()
                     })
+        .navigationBarHidden(true).navigationBarBackButtonHidden(true)
     }
 }
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScreen().preferredColorScheme(.dark
-        )
+        HomeScreen().preferredColorScheme(.dark)
     }
 }

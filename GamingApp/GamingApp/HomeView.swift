@@ -31,6 +31,7 @@ struct HomeView: View {
                     Image(systemName: "person")
                     Text("Profile")
                 }.tag(3)
+                .navigationBarHidden(true).navigationBarBackButtonHidden(true)
         }
 //        .accentColor(Color.white)
         .navigationBarBackButtonHidden(true)
@@ -41,7 +42,7 @@ struct HomeView: View {
             UITabBar.appearance().unselectedItemTintColor = UIColor.gray
             UITabBar.appearance().isTranslucent = true
             print("Iniciando las vistas de home")
-        }
+    }
 }
 
 struct HomeView_Previews: PreviewProvider {
