@@ -75,11 +75,6 @@ struct HomeScreenSubmodule: View {
                     }, label: {
                         Cards(gameName: "The Witcher 3").padding(.bottom, 20)
                     })
-                Image(systemName: "play.circle.fill")
-                .resizable()
-                .foregroundColor(.white)
-                .frame(width: 42, height: 42)
-                .offset(y: -10)
             }
             Text("Suggested categories".uppercased())
                 .font(.title3)
@@ -87,6 +82,29 @@ struct HomeScreenSubmodule: View {
                 .bold()
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
         }.navigationBarHidden(true).navigationBarBackButtonHidden(true)
+        ScrollView(.horizontal, showsIndicators: false) { // suggested cateregories buttons
+            HStack {
+                Button {
+                    //
+                } label: {
+                    CategoriesCard(cateregoryName: "fps", cateregoryImageName: "FPS")
+                }
+
+                Button {
+                    //
+                } label: {
+                    CategoriesCard(cateregoryName: "rpg", cateregoryImageName: "RPG")
+                }
+
+                Button {
+                    //
+                } label: {
+                    CategoriesCard(cateregoryName: "Open World", cateregoryImageName: "OpenWorld")
+                }
+
+            }
+        }
+        // MARK: - Navigation things
         NavigationLink(
                     destination: VideoPlayer(player:
                             AVPlayer(url: URL(string: url)!))
