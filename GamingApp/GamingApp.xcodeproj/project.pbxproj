@@ -46,6 +46,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84D06FF827F5425E00BBD38F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84D06FF927F5427400BBD38F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84E8018A27DA68A4003A7475 /* ContentView.swift */,
+				84C4E88027E17000004AB9D5 /* HomeView.swift */,
+				8488B6EE27E541280027E653 /* HomeScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84D06FFA27F5427B00BBD38F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		84D06FFB27F542BD00BBD38F /* TestViews */ = {
+			isa = PBXGroup;
+			children = (
+				8497E45E27DEBD1600D8FA58 /* LogInView.swift */,
+				848D97A027DFEFE100DFCE56 /* SignUpView.swift */,
+			);
+			path = TestViews;
+			sourceTree = "<group>";
+		};
+		84D06FFC27F542F400BBD38F /* ViewItems */ = {
+			isa = PBXGroup;
+			children = (
+				849592ED27F2118A00A89494 /* Cards.swift */,
+				84018F1527DFA5D20021F853 /* Buttons.swift */,
+				84DA3D8C27DFAEC3004322E1 /* TextAndPasswordInput.swift */,
+			);
+			path = ViewItems;
+			sourceTree = "<group>";
+		};
 		84E8017C27DA68A4003A7475 = {
 			isa = PBXGroup;
 			children = (
@@ -66,16 +109,13 @@
 			isa = PBXGroup;
 			children = (
 				84E8018827DA68A4003A7475 /* GamingAppApp.swift */,
-				84E8018A27DA68A4003A7475 /* ContentView.swift */,
-				8497E45E27DEBD1600D8FA58 /* LogInView.swift */,
-				848D97A027DFEFE100DFCE56 /* SignUpView.swift */,
-				84C4E88027E17000004AB9D5 /* HomeView.swift */,
-				8488B6EE27E541280027E653 /* HomeScreen.swift */,
-				849592ED27F2118A00A89494 /* Cards.swift */,
-				84018F1527DFA5D20021F853 /* Buttons.swift */,
-				84DA3D8C27DFAEC3004322E1 /* TextAndPasswordInput.swift */,
-				84E8018C27DA68A5003A7475 /* Assets.xcassets */,
+				84D06FF827F5425E00BBD38F /* Models */,
+				84D06FF927F5427400BBD38F /* Views */,
+				84D06FFA27F5427B00BBD38F /* ViewModels */,
+				84D06FFC27F542F400BBD38F /* ViewItems */,
 				84E8018E27DA68A5003A7475 /* Preview Content */,
+				84D06FFB27F542BD00BBD38F /* TestViews */,
+				84E8018C27DA68A5003A7475 /* Assets.xcassets */,
 			);
 			path = GamingApp;
 			sourceTree = "<group>";

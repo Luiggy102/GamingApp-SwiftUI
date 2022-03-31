@@ -10,8 +10,9 @@ import SwiftUI
 struct PreviewForCards: View {
     var body: some View {
         VStack {
-            Cards(gameName: "Cuphead")
+//            Cards(gameName: "Cuphead")
             CategoriesCard(cateregoryName: "Fps", cateregoryImageName: "FPS")
+            ImageCard(imageName: "Abzu")
         }
     }
 }
@@ -51,6 +52,17 @@ struct CategoriesCard: View {
         }.frame(width: 200, height: 160)
                 .background(Color(red: 20/255, green: 40/255, blue: 69/255))
                 .cornerRadius(10)
+    }
+}
+
+struct ImageCard: View {
+    @State var imageName: String
+    var body: some View {
+        VStack {
+            Image(imageName)
+                .resizable()
+                .frame(width: 200, height: 160)
+        }
     }
 }
 

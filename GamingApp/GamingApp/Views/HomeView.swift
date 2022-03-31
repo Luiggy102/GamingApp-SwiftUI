@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct HomeView: View {
     @State var selectedTab: Int = 0
@@ -33,15 +34,17 @@ struct HomeView: View {
                 }.tag(3)
                 .navigationBarHidden(true).navigationBarBackButtonHidden(true)
         }
-//        .accentColor(Color.white)
+        .accentColor(Color.white)
+//        .blur(radius: 20)
         .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
     }
     init() {
             UITabBar.appearance().backgroundColor = UIColor(Color(red: 57/255, green: 63/255, blue: 83/255))
-            UITabBar.appearance().unselectedItemTintColor = UIColor.gray
+//        UITabBar.appearance().barTintColor = UIColor(Color(red: 57/255, green: 63/255, blue: 83/255))
+        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
             UITabBar.appearance().isTranslucent = true
-            print("Iniciando las vistas de home")
+            print("Iniciating Home View")
     }
 }
 
