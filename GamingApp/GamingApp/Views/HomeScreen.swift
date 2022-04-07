@@ -39,8 +39,8 @@ struct HomeScreen: View {
                     }.padding(.horizontal, 18)
                 }
             }
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
+//            .navigationBarHidden(true)
+//            .navigationBarBackButtonHidden(true)
     }
     func search() {
         print("searching \($searchQuery)")
@@ -87,7 +87,8 @@ struct HomeScreenSubmodule: View {
                 .foregroundColor(.white)
                 .bold()
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-        }.navigationBarHidden(true).navigationBarBackButtonHidden(true)
+        }
+//        .navigationBarHidden(true).navigationBarBackButtonHidden(true)
         ScrollView(.horizontal, showsIndicators: false) { // suggested cateregories buttons
             HStack {
                 Button {
@@ -186,8 +187,8 @@ struct HomeScreenSubmodule: View {
                     label: {
                         EmptyView()
                     })
-        .navigationBarHidden(true)
-        .navigationBarBackButtonHidden(true)
+//        .navigationBarHidden(true)
+//        .navigationBarBackButtonHidden(true)
     }
 }
 struct HomeScreen_Previews: PreviewProvider {

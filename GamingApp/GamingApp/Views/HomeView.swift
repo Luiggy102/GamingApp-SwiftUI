@@ -17,7 +17,7 @@ struct HomeView: View {
                     Image(systemName: "house")
                     Text("Home")
                 }.tag(0) // los tags son para identificar los tabs
-            Text("")
+            GamesView()
                 .tabItem {
                     Image(systemName: "gamecontroller")
                     Text("Games")
