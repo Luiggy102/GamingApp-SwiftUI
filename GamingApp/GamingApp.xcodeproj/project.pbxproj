@@ -25,7 +25,6 @@
 
 /* Begin PBXFileReference section */
 		84018F1527DFA5D20021F853 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
-		840713E727FE48630005253A /* tests.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = tests.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8488B6EE27E541280027E653 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		848D97A027DFEFE100DFCE56 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		849592ED27F2118A00A89494 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
@@ -77,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				84AB526E27F66F48004B54AB /* ViewModel.swift */,
-				840713E727FE48630005253A /* tests.playground */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";

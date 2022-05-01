@@ -14,7 +14,6 @@ struct TextAndPasswordInput: View {
         VStack {
             MailInput(title: "Email", bindingEmail: $demoVar, placeholder: "example@mail.com")
             PasswordInput(title: "Password", bindingPassword: $demoVar2, placeholder: "demo")
-//            PasswordInputWithButton(title: "a", bindingPassword: $demoVar2, isPasswordVisible: true)
         }
     }
 }

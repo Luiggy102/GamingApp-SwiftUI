@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var typeOfLogIn: Bool = true
     @State var isHomeViewActive: Bool = false
-    @State var email = "" // dependiendo del usario, esta var se actualizara
+    @State var email = ""
     @State var password = ""
     @State var isPasswordVisible: Bool = false
     @State var newUserMail = ""
@@ -20,7 +20,7 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 Color(red: 19/255, green: 30/255, blue: 53/255, opacity: 1.0)
-                    .ignoresSafeArea() // Background
+                    .ignoresSafeArea()
                 Spacer()
                 VStack {
                     Image("AppLogo")
@@ -58,12 +58,7 @@ struct ContentView: View {
             }.navigationBarHidden(true)
         }
     }
-//    func logIn() {
-//        isHomeViewActive = true
-//    }
 }
-
-// MARK: -
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

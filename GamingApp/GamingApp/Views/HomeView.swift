@@ -36,12 +36,6 @@ struct HomeView: View {
         .accentColor(Color.white)
         .background(.ultraThinMaterial)
     }
-//    init() {
-//            UITabBar.appearance().backgroundColor = UIColor(Color(red: 57/255, green: 63/255, blue: 83/255))
-//            UITabBar.appearance().unselectedItemTintColor = UIColor.gray
-//            UITabBar.appearance().isTranslucent = true
-//            print("Iniciating Home View")
-//    }
 }
 
 struct HomeView_Previews: PreviewProvider {
