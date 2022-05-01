@@ -75,7 +75,7 @@ struct UrlImage: View {
             Image(uiImage: uiImage)
                 .resizable()
                 .scaledToFill()
-                .frame(width: 130, height: 70)
+//                .frame(width: 130, height: 70)
                 .background(Color.gray)
         } else { // Sino usamos una imagen de ejemplo
            Image(systemName: "video")

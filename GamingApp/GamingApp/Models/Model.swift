@@ -7,13 +7,10 @@
 
 import Foundation
 
-// Cada struct equivale a un Json {}
 struct Game: Hashable, Decodable {
-    let title, studio, contentRaiting, publicationYear: String
-    let welcomeDescription: String
-    let platforms, tags: [String]
+    let title, studio, contentRaiting, publicationYear, welcomeDescription: String
+    let platforms, tags, galleryImages: [String]
     let videosUrls: VideosUrls
-    let galleryImages: [String]
 
     enum CodingKeys: String, CodingKey {
         case title, studio, contentRaiting, publicationYear
@@ -22,7 +19,6 @@ struct Game: Hashable, Decodable {
     }
 }
 
-// MARK: - VideosUrls
 struct VideosUrls: Hashable, Decodable {
     let mobile, tablet: String
 }

@@ -33,6 +33,7 @@ struct HomeView: View {
                     Text("Profile")
                 }.tag(3)
         }
+        .navigationBarHidden(true)
         .accentColor(Color.white)
         .background(.ultraThinMaterial)
     }
