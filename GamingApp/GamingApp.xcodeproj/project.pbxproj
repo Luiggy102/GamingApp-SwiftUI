@@ -65,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				84E8018A27DA68A4003A7475 /* ContentView.swift */,
+				84D06FFB27F542BD00BBD38F /* LogInSignUpViews */,
 				84C4E88027E17000004AB9D5 /* HomeView.swift */,
 				8488B6EE27E541280027E653 /* HomeScreen.swift */,
 				84FFB4A527FF2F170061E69E /* GamesView.swift */,
@@ -81,13 +82,13 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		84D06FFB27F542BD00BBD38F /* TestViews */ = {
+		84D06FFB27F542BD00BBD38F /* LogInSignUpViews */ = {
 			isa = PBXGroup;
 			children = (
 				8497E45E27DEBD1600D8FA58 /* LogInView.swift */,
 				848D97A027DFEFE100DFCE56 /* SignUpView.swift */,
 			);
-			path = TestViews;
+			path = LogInSignUpViews;
 			sourceTree = "<group>";
 		};
 		84D06FFC27F542F400BBD38F /* ViewItems */ = {
@@ -125,7 +126,6 @@
 				84D06FFA27F5427B00BBD38F /* ViewModels */,
 				84D06FFC27F542F400BBD38F /* ViewItems */,
 				84E8018E27DA68A5003A7475 /* Preview Content */,
-				84D06FFB27F542BD00BBD38F /* TestViews */,
 				84E8018C27DA68A5003A7475 /* Assets.xcassets */,
 			);
 			path = GamingApp;

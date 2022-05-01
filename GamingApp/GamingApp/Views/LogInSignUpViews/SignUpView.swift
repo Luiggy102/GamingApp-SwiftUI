@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @State var newUserMail = ""
-    @State var newUserPassword = ""
-    @State var confirmNewUserPassword = ""
+    @Binding var newUserMail: String
+    @Binding var newUserPassword: String
+    @Binding var confirmNewUserPassword: String
+    @Binding var isHomeViewActive: Bool
     var body: some View {
         ScrollView {
             VStack {
@@ -48,7 +49,7 @@ struct SignUpView: View {
                               placeholder: "Type again your password")
                     .padding(.bottom, 40.0)
                 Button {
-                    // Botón de registrarse
+                   isHomeViewActive = true
                 } label: {
                     MainButton(textOfTheButton: "Register")
                 }
@@ -74,11 +75,9 @@ struct SignUpView: View {
     }
 }
 
-struct SignUpView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignUpView()
-            .preferredColorScheme(.dark)
-        Image("screen2")
-            .resizable()
-    }
-}
+// struct SignUpView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SignUpView()
+//            .preferredColorScheme(.dark)
+//    }
+// }

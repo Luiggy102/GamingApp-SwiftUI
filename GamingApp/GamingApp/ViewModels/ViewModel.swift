@@ -29,6 +29,35 @@ class ViewModel: ObservableObject {
         }
         task.resume()
     }
-//    init() {
-//    }
 }
+
+// struct UrlImage: View {
+//    let urlString: String
+//    @State var data: Data?
+//    var body: some View {
+//        // Si hay data, procede
+//        if let data = data, let uiImage = UIImage(data: data) {
+//            Image(uiImage: uiImage)
+//                .resizable()
+//                .scaledToFill()
+//                .frame(width: 130, height: 70)
+//                .background(Color.gray)
+//        } else { // Sino usamos una imagen de ejemplo
+//           Image(systemName: "video")
+//                .resizable()
+//                .scaledToFill()
+//                .frame(width: 130, height: 70)
+//                .background(Color.gray)
+//                .onAppear {
+//                    fetchImageData()
+//                }
+//        }
+//    }
+//    private func fetchImageData() {
+//        guard let url = URL(string: urlString) else { return }
+//        let task = URLSession.shared.dataTask(with: url) { data, _, _ in
+//            self.data = data
+//        }
+//        task.resume()
+//    }
+// }

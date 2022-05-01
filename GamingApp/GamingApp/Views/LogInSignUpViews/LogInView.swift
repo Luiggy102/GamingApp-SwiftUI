@@ -7,10 +7,10 @@
 import SwiftUI
 
 struct LogInView: View {
-    @State var email = "" // dependiendo del usario, esta var se actualizara
-    @State var password = ""
-    @State var isPasswordVisible: Bool = false
-    @State var isHomeViewActive: Bool = false
+    @Binding var email: String // dependiendo del usario, esta var se actualizara
+    @Binding var password: String
+    @Binding var isPasswordVisible: Bool
+    @Binding var isHomeViewActive: Bool
     var body: some View {
             ScrollView { // ScrollView Para pantallas más pequeñas
                 VStack(alignment: .leading) {
@@ -56,7 +56,7 @@ struct LogInView: View {
                     }
                     // Botón de iniciar sesion
                     Button {
-                        logIn()
+                        isHomeViewActive = true
                     } label: {
                         MainButton(textOfTheButton: "Log in")
                     }
@@ -81,14 +81,14 @@ struct LogInView: View {
                 }.padding(.horizontal, 77.0)
             }
     }
-    func logIn() {
-        isHomeViewActive = true
-    }
+//    func logIn() {
+//        self.isHomeViewActive = true
+//    }
 }
 
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {
-        LogInView().preferredColorScheme(.dark)
-        // Image("screen1").resizable()
+//        LogInView().preferredColorScheme(.dark)
+         Image("screen1").resizable()
     }
 }

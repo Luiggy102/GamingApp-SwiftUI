@@ -32,20 +32,16 @@ struct HomeView: View {
                     Image(systemName: "person")
                     Text("Profile")
                 }.tag(3)
-                .navigationBarHidden(true).navigationBarBackButtonHidden(true)
         }
         .accentColor(Color.white)
-//        .blur(radius: 20)
-        .navigationBarBackButtonHidden(true)
-            .navigationBarHidden(true)
+        .background(.ultraThinMaterial)
     }
-    init() {
-            UITabBar.appearance().backgroundColor = UIColor(Color(red: 57/255, green: 63/255, blue: 83/255))
-//        UITabBar.appearance().barTintColor = UIColor(Color(red: 57/255, green: 63/255, blue: 83/255))
-        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
-            UITabBar.appearance().isTranslucent = true
-            print("Iniciating Home View")
-    }
+//    init() {
+//            UITabBar.appearance().backgroundColor = UIColor(Color(red: 57/255, green: 63/255, blue: 83/255))
+//            UITabBar.appearance().unselectedItemTintColor = UIColor.gray
+//            UITabBar.appearance().isTranslucent = true
+//            print("Iniciating Home View")
+//    }
 }
 
 struct HomeView_Previews: PreviewProvider {

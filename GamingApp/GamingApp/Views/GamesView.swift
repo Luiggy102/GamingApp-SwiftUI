@@ -10,18 +10,16 @@ import SwiftUI
 struct GamesView: View {
     @StateObject var viewModel = ViewModel()
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(viewModel.gamesInfo, id: \.self) { game in
-                    HStack {
-                        UrlImage(urlString: game.galleryImages[0])
-                        Text(game.title)
-                            .bold()
-                    }
+        List {
+            ForEach(viewModel.gamesInfo, id: \.self) { game in
+                HStack {
+                    UrlImage(urlString: game.galleryImages[0])
+                    Text(game.title)
                 }
             }
-            .navigationTitle("Games")
-        }.onAppear {
+            .navigationBarHidden(true).navigationBarBackButtonHidden(true)
+        }
+        .onAppear {
             viewModel.fetch()
         }
     }

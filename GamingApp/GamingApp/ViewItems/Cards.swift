@@ -10,7 +10,6 @@ import SwiftUI
 struct PreviewForCards: View {
     var body: some View {
         VStack {
-//            Cards(gameName: "Cuphead")
             CategoriesCard(cateregoryName: "Fps", cateregoryImageName: "FPS")
             ImageCard(imageName: "Abzu")
         }
