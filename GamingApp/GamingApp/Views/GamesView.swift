@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct GamesView: View {
     @StateObject var viewModel = ViewModel()
     @State var gameViewIsActive: Bool = false
-//    var title, studio, contentRaiting, publicationYear, welcomeDescription: String
-//    var platforms, tags, galleryImages: [String]
+    // MARK: - game vars
+    @State var gameUrl: String = ""
+    @State var title: String = ""
+    @State var studio: String = ""
+    @State var contentRaiting: String = ""
+    @State var publicationYear: String = ""
+    @State var welcomeDescription: String = ""
+    @State var platforms: [String] = [""]
+    @State var tags: [String] = [""]
+    @State var galleryImages: [String] = [""]
     let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -31,6 +40,15 @@ struct GamesView: View {
                         ForEach(viewModel.gamesInfo, id: \.self) { game in
                             Button(action: {
                                 print("Pulsado \(game.title)")
+                                gameUrl = game.videosUrls.mobile
+                                title = game.title
+                                studio = game.studio
+                                contentRaiting = game.contentRaiting
+                                publicationYear = game.publicationYear
+                                welcomeDescription = game.welcomeDescription
+                                platforms = game.platforms
+                                tags = game.tags
+                                galleryImages = game.galleryImages
                                 gameViewIsActive = true
                             }, label: {
                                 UrlImage(urlString: game.galleryImages[1])
@@ -42,6 +60,19 @@ struct GamesView: View {
                     }
                 }
                 .padding()
+                NavigationLink(
+                    "",
+                    destination: GameView(gameUrl: gameUrl,
+                                          title: title,
+                                          studio: studio,
+                                          contentRaiting: contentRaiting,
+                                          publicationYear: publicationYear,
+                                          welcomeDescription: welcomeDescription,
+                                          platforms: platforms,
+                                          tags: tags,
+                                          galleryImages: galleryImages),
+                    isActive: $gameViewIsActive
+                )
             }
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
