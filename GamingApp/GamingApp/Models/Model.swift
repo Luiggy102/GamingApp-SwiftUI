@@ -19,6 +19,10 @@ struct Game: Hashable, Decodable {
     }
 }
 
+struct GameResults: Decodable, Hashable {
+    var results: [Game]
+}
+
 struct VideosUrls: Hashable, Decodable {
     let mobile, tablet: String
 }

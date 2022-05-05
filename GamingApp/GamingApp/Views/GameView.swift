@@ -19,7 +19,7 @@ struct GameView: View {
                 let player = AVPlayer(url: URL(string: gameUrl)!)
                 VideoPlayer(player: player)
                     .ignoresSafeArea()
-                    .frame(height: 200)
+                    .frame(height: 150)
                     .onAppear {
 //                        player.play()
                         player.isMuted = true
@@ -36,6 +36,7 @@ struct GameView: View {
                 }
             }
         }
+        .tint(.white)
     }
 }
 
@@ -113,9 +114,9 @@ veniam
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     Button {
-                    } label: { ImageCard(imageName: "Grand Theft Auto V") }
-                    Button {
                     } label: { ImageCard(imageName: "Crash Bandicoot") }
+                    Button {
+                    } label: { ImageCard(imageName: "Grand Theft Auto V") }
                     Button {
                     } label: { ImageCard(imageName: "Death Stranding".uppercased()) }
                 }
@@ -173,9 +174,9 @@ Juego de Sega Genesis publicado en 1991 con más de 40 millones de copias vendid
                  platforms: ["sega", "nintendo"],
                  tags: ["plataformas", "mascota"],
                  galleryImages: [
-                    "https://cdn.cloudflare.steamstatic.com/steam/apps/268910/ss_615455299355eaf552c638c7ea5b24a8b46e02dd.600x338.jpg",
-                    "https://cdn.cloudflare.steamstatic.com/steam/apps/268910/ss_615455299355eaf552c638c7ea5b24a8b46e02dd.600x338.jpg",
-                    "https://cdn.cloudflare.steamstatic.com/steam/apps/268910/ss_615455299355eaf552c638c7ea5b24a8b46e02dd.600x338.jpg"]
+"https://cdn.cloudflare.steamstatic.com/steam/apps/268910/ss_615455299355eaf552c638c7ea5b24a8b46e02dd.600x338.jpg",
+"https://cdn.cloudflare.steamstatic.com/steam/apps/268910/ss_615455299355eaf552c638c7ea5b24a8b46e02dd.600x338.jpg",
+"https://cdn.cloudflare.steamstatic.com/steam/apps/268910/ss_615455299355eaf552c638c7ea5b24a8b46e02dd.600x338.jpg"]
         )
         .preferredColorScheme(.dark)
     }
