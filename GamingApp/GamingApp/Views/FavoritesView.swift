@@ -20,7 +20,7 @@ struct FavoritesView: View {
                     .padding(.top)
                 ScrollView {
                     ForEach(allVideoGames.gamesInfo, id: \.self) { game in
-                        let player = AVPlayer(url: URL(string: game.videosUrls.mobile)!)
+                        let player = AVPlayer(url: URL(string: game.videosUrls.tablet)!)
                         VStack(spacing: 0) {
                             VideoPlayer(player: player)
                                 .frame(height: 200)
@@ -29,12 +29,12 @@ struct FavoritesView: View {
                                 .font(.headline)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .background(Color.theme.secondaryColor)
-                                .clipShape(RoundedRectangle(
-                                    cornerRadius: 3.0))
                         }
+                        .cornerRadius(3.0)
                     }
                 }
-                .padding(.bottom, 8)
+                .padding(.bottom, 10)
+                .onAppear { allVideoGames.fetch() }
             }
             .padding(.horizontal, 6)
         }

@@ -26,7 +26,7 @@ struct ContentView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 250)
-                        .padding()
+                        .padding(.top)
                     VStack {
                         HStack {
                             Spacer()

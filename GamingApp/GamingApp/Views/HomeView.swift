@@ -7,7 +7,6 @@
 
 import SwiftUI
 import UIKit
-import AVKit
 
 struct HomeView: View {
     @State var selectedTab: Int = 0
@@ -66,9 +65,6 @@ struct HomeScreen: View {
             }
         }
     }
-    //    func search() {
-    //        print("searching \($searchQuery)")
-    //    }
 }
 
 struct HomeScreenSubmodule: View {
@@ -88,22 +84,6 @@ struct HomeScreenSubmodule: View {
     @State var platforms: [String] = [""]
     @State var tags: [String] = [""]
     @State var galleryImages: [String] = [""]
-    let urlVideos: [String] = [
-        // Witcher 3
-        "https://cdn.cloudflare.steamstatic.com/steam/apps/256658589/movie480.mp4",
-        // Abzu
-        "https://cdn.cloudflare.steamstatic.com/steam/apps/256671638/movie480.mp4",
-        // Crash
-        "https://cdn.cloudflare.steamstatic.com/steam/apps/256720061/movie480.mp4",
-        // Death stranding
-        "https://cdn.cloudflare.steamstatic.com/steam/apps/256814567/movie480.mp4",
-        // Cuphead
-        "https://cdn.cloudflare.steamstatic.com/steam/apps/256705156/movie480.mp4",
-        // Hades
-        "https://cdn.cloudflare.steamstatic.com/steam/apps/256801252/movie480.mp4",
-        // GTA V
-        "https://cdn.cloudflare.steamstatic.com/steam/apps/256757119/movie480.mp4"
-    ]
     var body: some View {
         VStack {
             HStack {
