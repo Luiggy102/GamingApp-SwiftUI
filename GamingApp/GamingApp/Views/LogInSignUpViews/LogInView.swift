@@ -18,17 +18,17 @@ struct LogInView: View {
                     MailInput(title: "Email", bindingEmail: $email, placeholder: "Example@mail.com")
                     // Password
                     Text("Password")
-                        .foregroundColor(Color("Dark-Cyan"))
+                        .foregroundColor(Color.theme.darkCyan)
                         .fontWeight(.bold)
                     HStack {
                         if !isPasswordVisible { // difente de == True
                             SecureField("Type your password", text: $password)
-                                .foregroundColor(Color("Dark-Cyan"))
+                                .foregroundColor(Color.theme.darkCyan)
                                 .font(.caption)
                                 .disableAutocorrection(true)
                         } else {
                             TextField("", text: $password)
-                                .foregroundColor(Color("Dark-Cyan"))
+                                .foregroundColor(Color.theme.darkCyan)
                                 .font(.caption)
                                 .disableAutocorrection(true)
                         }
@@ -36,13 +36,13 @@ struct LogInView: View {
                             isPasswordVisible.toggle()
                         } label: {
                             Image(systemName: !isPasswordVisible ? "eye.slash.fill" : "eye.fill")
-                                .foregroundColor(Color("Dark-Cyan"))
+                                .foregroundColor(Color.theme.darkCyan)
                         }
                     }.padding(.bottom, 2)
 
                     Divider()
                         .frame(height: 1)
-                        .background(Color("Dark-Cyan"))
+                        .background(Color.theme.darkCyan)
                         .padding(.bottom)
                     // botón de Forgot your password
                     Button {
@@ -51,7 +51,7 @@ struct LogInView: View {
                         Text("Forgot your password?")
                             .font(.footnote)
                             .frame(width: 300, alignment: .trailing)
-                            .foregroundColor(Color("Dark-Cyan"))
+                            .foregroundColor(Color.theme.darkCyan)
                             .padding(.bottom, 40.0)
                     }
                     // Botón de iniciar sesion
@@ -88,7 +88,7 @@ struct LogInView: View {
 
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {
-//        LogInView().preferredColorScheme(.dark)
-         Image("screen1").resizable()
+//        LogInView()
+//            .preferredColorScheme(.dark)
     }
 }

@@ -17,14 +17,21 @@ struct FavoritesView: View {
                 Text("Favorites")
                     .font(.largeTitle)
                     .bold()
+                    .padding(.top)
                 ScrollView {
                     ForEach(allVideoGames.gamesInfo, id: \.self) { game in
-                        Text(game.title)
-                            .padding()
-                            .font(.headline)
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .foregroundColor(.white)
-                            .background(Color.theme.secondaryColor)
+                        let player = AVPlayer(url: URL(string: game.videosUrls.mobile)!)
+                        VStack(spacing: 0) {
+                            VideoPlayer(player: player)
+                                .frame(height: 200)
+                            Text(game.title)
+                                .padding()
+                                .font(.headline)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .background(Color.theme.secondaryColor)
+                                .clipShape(RoundedRectangle(
+                                    cornerRadius: 3.0))
+                        }
                     }
                 }
                 .padding(.bottom, 8)
