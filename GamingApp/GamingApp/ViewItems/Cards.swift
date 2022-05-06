@@ -12,6 +12,7 @@ struct PreviewForCards: View {
         VStack {
             CategoriesCard(cateregoryName: "Fps", cateregoryImageName: "FPS")
             ImageCard(imageName: "Abzu")
+            Cards(gameName: "Cuphead")
         }
     }
 }
@@ -33,7 +34,7 @@ struct Cards: View {
                 .font(.headline)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(.white)
-                .background(Color(red: 20/255, green: 40/255, blue: 69/255))
+                .background(Color.theme.secondaryColor)
         }
     }
 }
@@ -48,9 +49,9 @@ struct CategoriesCard: View {
                 .frame(width: 40, height: 40)
             Text(cateregoryName.uppercased())
                 .bold()
-                .foregroundColor(Color(red: 67/255, green: 254/255, blue: 193/255))
+                .foregroundColor(Color.theme.lightCyan)
         }.frame(width: 200, height: 160)
-                .background(Color(red: 20/255, green: 40/255, blue: 69/255))
+            .background(Color.theme.secondaryColor)
                 .cornerRadius(10)
     }
 }

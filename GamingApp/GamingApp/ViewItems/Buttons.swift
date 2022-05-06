@@ -28,7 +28,8 @@ struct MainButton: View {
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding(EdgeInsets(top: 11, leading: 18, bottom: 11, trailing: 18))
                     .overlay(RoundedRectangle(cornerRadius: 6.0)
-                        .stroke(Color("Dark-Cyan"), lineWidth: 1.0)
+                        .stroke(Color.theme.darkCyan,
+                                lineWidth: 1.0)
                         .shadow(color: .white, radius: 6))
             }
 }
@@ -40,7 +41,7 @@ struct SecundaryButton: View {
             .foregroundColor(.white)
             .frame(maxWidth: .infinity/2, maxHeight: 8, alignment: .center)
             .padding()
-            .background(Color(red: 31/255, green: 49/255, blue: 80/255))
+            .background(Color.theme.secondaryColor)
             .cornerRadius(9)
         }
 }

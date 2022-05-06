@@ -25,7 +25,7 @@ struct MailInput: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(self.title)
-                .foregroundColor(Color("Dark-Cyan"))
+                .foregroundColor(Color.theme.darkCyan)
                 .fontWeight(.bold)
             TextField(placeholder, text: self.bindingEmail)
                 .foregroundColor(.white)
@@ -33,7 +33,7 @@ struct MailInput: View {
                 .foregroundColor(.blue)
             Divider()
                 .frame(height: 1)
-                .background(Color("Dark-Cyan"))
+                .background(Color.theme.darkCyan)
                 .padding(.bottom)
         }
     }
@@ -46,7 +46,7 @@ struct PasswordInput: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(self.title)
-                .foregroundColor(Color("Dark-Cyan"))
+                .foregroundColor(Color.theme.darkCyan)
                 .fontWeight(.bold)
             HStack {
                 SecureField(placeholder, text: self.bindingPassword)
@@ -55,7 +55,7 @@ struct PasswordInput: View {
             }
             Divider()
                 .frame(height: 1)
-                .background(Color("Dark-Cyan"))
+                .background(Color.theme.darkCyan)
                 .padding(.bottom)
         }
     }

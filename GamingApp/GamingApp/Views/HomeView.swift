@@ -23,7 +23,7 @@ struct HomeView: View {
                     Image(systemName: "gamecontroller")
                     Text("Games")
                 }.tag(1)
-            Text("")
+            FavoritesView()
                 .tabItem {
                     Image(systemName: "heart")
                     Text("Favorites")
@@ -34,14 +34,16 @@ struct HomeView: View {
                     Text("Profile")
                 }.tag(3)
         }
-//        tint(.white)
+        .accentColor(.white)
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
     }
     init() {
-           UITabBar.appearance().barTintColor = UIColor(Color("tabBarColor"))
+           UITabBar.appearance().barTintColor = UIColor(
+            Color(red: 20/255, green: 40/255, blue: 69/255)
+           )
            UITabBar.appearance().isTranslucent = true
-           print("iniciando las vistas de home")
+           print("Init Home View")
     }
 }
 
