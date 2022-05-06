@@ -86,9 +86,9 @@ struct LogInView: View {
 //    }
 }
 
-struct LogInView_Previews: PreviewProvider {
-    static var previews: some View {
+// struct LogInView_Previews: PreviewProvider {
+//    static var previews: some View {
 //        LogInView()
 //            .preferredColorScheme(.dark)
-    }
-}
+//    }
+// }
