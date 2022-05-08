@@ -49,8 +49,8 @@ struct HomeView: View {
 struct HomeScreen: View {
     var body: some View {
         ZStack {
-            Color(red: 19/255, green: 30/255, blue: 53/255, opacity: 1.0)
-                .ignoresSafeArea()
+            Color.theme.backgroundColor
+            .ignoresSafeArea()
             Spacer()
             ScrollView {
                 VStack {
