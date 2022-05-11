@@ -24,6 +24,7 @@
 		84E8018D27DA68A5003A7475 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E8018C27DA68A5003A7475 /* Assets.xcassets */; };
 		84E8019027DA68A5003A7475 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E8018F27DA68A5003A7475 /* Preview Assets.xcassets */; };
 		84FFB4A627FF2F170061E69E /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FFB4A527FF2F170061E69E /* GamesView.swift */; };
+		B916664B282BF8940042F7DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B916664A282BF8940042F7DA /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		84E8018C27DA68A5003A7475 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84E8018F27DA68A5003A7475 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84FFB4A527FF2F170061E69E /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
+		B916664A282BF8940042F7DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				84E8018A27DA68A4003A7475 /* ContentView.swift */,
 				84D06FFB27F542BD00BBD38F /* LogInSignUpViews */,
 				84C4E88027E17000004AB9D5 /* HomeView.swift */,
+				B916664A282BF8940042F7DA /* ProfileView.swift */,
 				84FFB4A527FF2F170061E69E /* GamesView.swift */,
 				849D2328281EF827002F69F8 /* GameView.swift */,
 				84A74D4028255174001D8771 /* FavoritesView.swift */,
@@ -256,6 +259,7 @@
 				849592EE27F2118A00A89494 /* Cards.swift in Sources */,
 				84E8018B27DA68A4003A7475 /* ContentView.swift in Sources */,
 				84FFB4A627FF2F170061E69E /* GamesView.swift in Sources */,
+				B916664B282BF8940042F7DA /* ProfileView.swift in Sources */,
 				84A74D45282557F3001D8771 /* Color.swift in Sources */,
 				849F801D28241B0F008E3301 /* SearchGame.swift in Sources */,
 				84AB526D27F66BF4004B54AB /* Model.swift in Sources */,

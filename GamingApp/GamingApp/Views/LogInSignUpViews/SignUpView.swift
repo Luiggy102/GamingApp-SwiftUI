@@ -30,7 +30,7 @@ struct SignUpView: View {
                         Image("demoPhoto")
                             .resizable()
                             .opacity(1)
-                            .foregroundColor(Color("Dark-Cyan"))
+                            .foregroundColor(Color("darkCyan"))
                             .frame(width: 80, height: 80)
                             .cornerRadius(50)
                             .scaledToFill()
