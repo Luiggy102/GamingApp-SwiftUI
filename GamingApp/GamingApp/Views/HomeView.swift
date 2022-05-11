@@ -27,7 +27,7 @@ struct HomeView: View {
                     Image(systemName: "heart")
                     Text("Favorites")
                 }.tag(2)
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            ProfileView()
                 .tabItem {
                     Image(systemName: "person")
                     Text("Profile")

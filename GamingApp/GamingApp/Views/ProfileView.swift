@@ -26,7 +26,7 @@ struct ProfileView: View {
                             .resizable()
                             .frame(width: 80, height: 80)
                             .cornerRadius(50)
-                            .padding()
+                            .padding(.top)
                         Text("Gamer name user")
                             .font(.title2)
                     }
@@ -42,14 +42,65 @@ struct ProfileView: View {
 }
 
 struct SettingsSubModule: View {
+    @State var enableNotification: Bool = false
+    @State var isEditProfileViewActive: Bool = false
     var body: some View {
-        VStack() {
-           Text("Settings")
+        VStack(alignment: .leading) {
+            Text("Settings".uppercased())
                 .font(.title2)
                 .fontWeight(.bold)
+                .padding(.leading)
+            Button {
+//                isEditProfileViewActive = true
+            } label: {
+                HStack {
+                    Text("Account")
+                        .foregroundColor(.white)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.gray)
+                }
+                .padding()
+            }
+            .background(Color.theme.secondaryColor)
+            //
+            Toggle("Notifications", isOn: $enableNotification)
+                .padding(10)
+                .background(Color.theme.secondaryColor)
+            //
+            Button {
+                isEditProfileViewActive = true
+            } label: {
+                HStack {
+                    Text("Edit Profile")
+                        .foregroundColor(.white)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.gray)
+                }
+                .padding()
+            }
+            .background(Color.theme.secondaryColor)
+            //
+            Button {
+//                isEditProfileViewActive = true
+            } label: {
+                HStack {
+                    Text("Rate this app")
+                        .foregroundColor(.white)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.gray)
+                }
+                .padding()
+            }
+            .background(Color.theme.secondaryColor)
+            //
         }
-        .frame(maxWidth:.infinity, alignment: .leading)
-        .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
+        NavigationLink("",
+                        destination: EditProfileView(),
+                        isActive: $isEditProfileViewActive)
     }
 }
 

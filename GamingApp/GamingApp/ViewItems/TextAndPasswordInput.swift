@@ -31,6 +31,7 @@ struct MailInput: View {
                 .foregroundColor(.white)
                 .font(.caption)
                 .foregroundColor(.blue)
+                .disableAutocorrection(true)
             Divider()
                 .frame(height: 1)
                 .background(Color.theme.darkCyan)
@@ -52,6 +53,7 @@ struct PasswordInput: View {
                 SecureField(placeholder, text: self.bindingPassword)
                     .foregroundColor(.white)
                 .font(.caption)
+                .disableAutocorrection(true)
             }
             Divider()
                 .frame(height: 1)
