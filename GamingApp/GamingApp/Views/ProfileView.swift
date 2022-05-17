@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State var username: String = "Lorem"
+    @State var username: String = ""
     var body: some View {
         ZStack {
             Color.theme.backgroundColor.ignoresSafeArea()
@@ -27,7 +27,7 @@ struct ProfileView: View {
                             .frame(width: 80, height: 80)
                             .cornerRadius(50)
                             .padding(.top)
-                        Text("Gamer name user")
+                        Text(username)
                             .font(.title2)
                     }
                     .padding()
@@ -36,7 +36,7 @@ struct ProfileView: View {
             }
         }
         .onAppear {
-            //
+            username = UserDefaults.standard.string(forKey: "username") ?? "N/A"
         }
     }
 }

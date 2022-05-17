@@ -25,6 +25,7 @@
 		84E8019027DA68A5003A7475 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E8018F27DA68A5003A7475 /* Preview Assets.xcassets */; };
 		84FFB4A627FF2F170061E69E /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FFB4A527FF2F170061E69E /* GamesView.swift */; };
 		B916664B282BF8940042F7DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B916664A282BF8940042F7DA /* ProfileView.swift */; };
+		B926E8EB2833154800BC74EA /* saveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B926E8EA2833154800BC74EA /* saveData.swift */; };
 		B9C48E1F282C088000A9D7E1 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C48E1E282C088000A9D7E1 /* EditProfileView.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		84E8018F27DA68A5003A7475 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84FFB4A527FF2F170061E69E /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
 		B916664A282BF8940042F7DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B926E8EA2833154800BC74EA /* saveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveData.swift; sourceTree = "<group>"; };
 		B9C48E1E282C088000A9D7E1 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				84AB526C27F66BF4004B54AB /* Model.swift */,
+				B926E8EA2833154800BC74EA /* saveData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				B9C48E1F282C088000A9D7E1 /* EditProfileView.swift in Sources */,
 				84C4E88127E17000004AB9D5 /* HomeView.swift in Sources */,
 				84DA3D8D27DFAEC3004322E1 /* TextAndPasswordInput.swift in Sources */,
+				B926E8EB2833154800BC74EA /* saveData.swift in Sources */,
 				84AB526F27F66F48004B54AB /* ViewModel.swift in Sources */,
 				84A74D4128255174001D8771 /* FavoritesView.swift in Sources */,
 				849592EE27F2118A00A89494 /* Cards.swift in Sources */,

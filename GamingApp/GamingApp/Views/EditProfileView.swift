@@ -48,7 +48,8 @@ struct EditProfileView: View {
                         PasswordInput(title: "New password",
                                       bindingPassword: $chagedPassword,
                                       placeholder: "***********")
-                        Button { updateUserData() } label: {
+                        Button {
+                        } label: {
                             MainButton(textOfTheButton: "Update profile")
                         }
 
