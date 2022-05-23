@@ -36,7 +36,7 @@ struct ProfileView: View {
             }
         }
         .onAppear {
-            username = UserDefaults.standard.string(forKey: "username") ?? "N/A"
+            username = UserDefaults.standard.stringArray(forKey: "userData")?[0] ?? "N/A"
         }
     }
 }

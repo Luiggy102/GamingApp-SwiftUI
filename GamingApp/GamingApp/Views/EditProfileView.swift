@@ -48,8 +48,7 @@ struct EditProfileView: View {
                         PasswordInput(title: "New password",
                                       bindingPassword: $chagedPassword,
                                       placeholder: "***********")
-                        Button {
-                        } label: {
+                        Button { updateUserData() } label: {
                             MainButton(textOfTheButton: "Update profile")
                         }
 
@@ -60,7 +59,17 @@ struct EditProfileView: View {
         }
     }
     func updateUserData() {
-       //
+        let updateDataObject = SaveData()
+         let savedData = updateDataObject.saveData(username: changedUserName,
+                                  userMail: changedMail,
+                                  userPassword: chagedPassword)
+        if savedData == true {
+            print("Data updated correctly")
+            print("New Data: \n username:\(changedUserName) \n email:\(changedMail) \n password:\(chagedPassword)")
+            print("\(String(describing: UserDefaults.standard.stringArray(forKey: "userData")))")
+        } else {
+            print("Error while updating data")
+        }
     }
 }
 
