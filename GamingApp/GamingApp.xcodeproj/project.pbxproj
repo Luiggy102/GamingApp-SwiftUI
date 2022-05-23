@@ -26,6 +26,7 @@
 		84FFB4A627FF2F170061E69E /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FFB4A527FF2F170061E69E /* GamesView.swift */; };
 		B916664B282BF8940042F7DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B916664A282BF8940042F7DA /* ProfileView.swift */; };
 		B926E8EB2833154800BC74EA /* saveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B926E8EA2833154800BC74EA /* saveData.swift */; };
+		B9A1E80A283C05E70069BD90 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A1E809283C05E70069BD90 /* PhotoPicker.swift */; };
 		B9C48E1F282C088000A9D7E1 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C48E1E282C088000A9D7E1 /* EditProfileView.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		84FFB4A527FF2F170061E69E /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
 		B916664A282BF8940042F7DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B926E8EA2833154800BC74EA /* saveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveData.swift; sourceTree = "<group>"; };
+		B9A1E809283C05E70069BD90 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		B9C48E1E282C088000A9D7E1 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 				84A74D4028255174001D8771 /* FavoritesView.swift */,
 				B916664A282BF8940042F7DA /* ProfileView.swift */,
 				B9C48E1E282C088000A9D7E1 /* EditProfileView.swift */,
+				B9A1E809283C05E70069BD90 /* PhotoPicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				B916664B282BF8940042F7DA /* ProfileView.swift in Sources */,
 				84A74D45282557F3001D8771 /* Color.swift in Sources */,
 				849F801D28241B0F008E3301 /* SearchGame.swift in Sources */,
+				B9A1E80A283C05E70069BD90 /* PhotoPicker.swift in Sources */,
 				84AB526D27F66BF4004B54AB /* Model.swift in Sources */,
 				84E8018927DA68A4003A7475 /* GamingAppApp.swift in Sources */,
 				848D97A127DFEFE100DFCE56 /* SignUpView.swift in Sources */,
