@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct EditProfileView: View {
-    @State var changedUserName: String = ""
-    @State var changedMail: String = ""
-    @State var chagedPassword: String = ""
+    @State private var changedUserName: String = ""
+    @State private var changedMail: String = ""
+    @State private var chagedPassword: String = ""
+    @State private var isShowingPhotoPicker = false
+    @State private var avatarImage = UIImage(named: "demoPhoto")!
     var body: some View {
         ZStack {
             Color.theme.backgroundColor.ignoresSafeArea()
@@ -20,7 +22,7 @@ struct EditProfileView: View {
                 Button {
                     //
                 } label: {
-                Image("demoPhoto")
+                    Image(uiImage: avatarImage)
                     .resizable()
                     .opacity(1)
                     .foregroundColor(Color.theme.darkCyan)
@@ -35,6 +37,7 @@ struct EditProfileView: View {
                                 .scaledToFill()
                     )
                     .padding()
+                    .onTapGesture { isShowingPhotoPicker = true }
                 }
                 Spacer()
                 ScrollView {
@@ -55,6 +58,9 @@ struct EditProfileView: View {
                     }
                     .padding()
                 }
+            }
+            .sheet(isPresented: $isShowingPhotoPicker) {
+                PhotoPicker(avatarImage: $avatarImage)
             }
         }
     }

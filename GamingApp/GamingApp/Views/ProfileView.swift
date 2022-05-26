@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State var isShowingPhotoPicker = false
     @State var username: String = ""
     var body: some View {
         ZStack {
@@ -28,7 +27,6 @@ struct ProfileView: View {
                             .frame(width: 80, height: 80)
                             .cornerRadius(50)
                             .padding(.top)
-                            .onTapGesture { isShowingPhotoPicker = true }
                         Text(username)
                             .font(.title2)
                     }
@@ -36,9 +34,6 @@ struct ProfileView: View {
                     SettingsSubModule()
                 }
             }
-        }
-        .sheet(isPresented: $isShowingPhotoPicker) {
-            PhotoPicker()
         }
         .onAppear {
             username = UserDefaults.standard.stringArray(forKey: "userData")?[0] ?? "N/A"
